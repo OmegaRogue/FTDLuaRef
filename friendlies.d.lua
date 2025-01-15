@@ -46,4 +46,4 @@ end
 ---@field electricPowerFraction number the electric power fraction. Returns 1 if no fuel storage present 
 ---@field blueprintName string the name 
 ---@field id integer the unique Id of the construct
-local friendly_info = {}
+local friendlyInfo = {}
