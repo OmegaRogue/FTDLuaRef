@@ -28,7 +28,7 @@ local Inputs = {
 
 ---@enum stim
 local Stims = {
-	none = 0,
+	None = 0,
 	T = 1,
 	G = 2,
 	Y = 3,
