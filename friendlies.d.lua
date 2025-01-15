@@ -30,20 +30,6 @@ function friendlies.get(index)
     
 end
 
-local prototype = {}
-
----@return number The number of friendlies spawned into the world
-function prototype.__len(o) 
-    
-end
-
----Returns a friendly info table for an ID
----@param id number the Id you want
----@return FriendlyInfo the FriendlyInfo table
-function prototype.__index(table, id)
-    
-end
-
 ---@class FriendlyInfo
 ---@field valid boolean false if the Friendly Info could not be retrieved 
 ---@field transform RigidTransform the transform of the friendly construct 
@@ -61,6 +47,3 @@ end
 ---@field blueprintName string the name 
 ---@field id integer the unique Id of the construct
 local friendly_info = {}
-
-
-setmetatable(friendlies, prototype)
