@@ -11,7 +11,7 @@
 ---@class Resources
 ---@field zones ResourceZoneInfo[] List of known resource zones
 ---@field [integer]ResourceZoneInfo Known resource zones
----@field resourcs ResourceInfo Ship resource data
+---@field resources ResourceInfo Ship resource data
 local resources = {}
 
 ---@class ResourceZoneInfo
@@ -23,14 +23,6 @@ local resources = {}
 local resourceZoneInfo = {}
 
 ---@class ResourceInfo
----@field crystalTotal number Total crystal resources
----@field crystalMax number Max crystal resources
----@field metalTotal number Total metal resources
----@field metalMax number Max metal resources
 ---@field naturalTotal number Total natural resources
 ---@field naturalMax number Max natural resources
----@field oilTotal number Total oil resources
----@field oilMax number Max oil resources
----@field scrapTotal number Total scrap resources
----@field scrapMax number Max scrap resources
 local resourceInfo = {}
