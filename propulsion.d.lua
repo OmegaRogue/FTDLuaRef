@@ -39,10 +39,10 @@ local Stims = {
 	K = 8,
 	O = 9,
 	L = 10,
-	up = 11,
-	down = 12,
-	left = 13,
-	right = 14
+	Up = 11,
+	Down = 12,
+	Left = 13,
+	Right = 14
 }
 
 
