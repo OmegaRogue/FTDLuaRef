@@ -20,4 +20,4 @@ local fleet = {}
 ---@field name string Name of the fleet.
 ---@field flagship FriendlyInfo Information about the flagship of the fleet.
 ---@field members FriendlyInfo[] A table of information regarding the fleet's members.  MAY CONTAIN NILS!
-local fleet_info = {}
+local fleetInfo = {}
