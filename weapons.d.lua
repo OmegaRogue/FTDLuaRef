@@ -11,19 +11,19 @@
 
 
 
----@enum WeaponTypes
-local WEAPON_TYPES = {
-	CANNON = 0,
-	MISSILE = 1,
-	LASER = 2,
-	BOMB = 3,
-	TORPEDO = 4,
-	LASER_POINTER = 5,
-	TURRET = 6,
-	MISSILE_CONTROL = 7,
-	PLASMA = 8,
-	PARTICLE_CANNON = 9,
-	FLAMER = 10,
+---@enum weapon_types
+local WeaponType = {
+	Cannon = 0,
+	Missile = 1,
+	Laser = 2,
+	Bomb = 3,
+	Torpedo = 4,
+	Laser_pointer = 5,
+	Turret = 6,
+	Missile_control = 7,
+	Plasma = 8,
+	Particle_cannon = 9,
+	Flamer = 10
 }
 
 ---@class SubWeapons
