@@ -36,21 +36,11 @@
 ---@field angularVelocity float3 the construct's velocity vector in world space. x is around east/west axis, y is around up/down axis, z is around north/south axis
 ---@field stability number the construct's stabilty, between 0 and 1
 
----@field material number the amount of materials stored
----@field materialCapacity number the amount of materials the craft can store
----@field materialFraction number the materials fraction. Returns 1 if no material storage present
----@field ammo number the amount of ammo currently available
----@field ammoCapacity number the amount of ammo the craft can store
----@field ammoFraction number the ammo fraction. Returns 1 if no ammo storage present
----@field fuel number the amount of fuel currently available
----@field fuelCapacity number the amount of fuel the craft can store
----@field fuelFraction number the fuel fraction. Returns 1 if no fuel storage present
----@field energy number the amount of energy currently available
----@field energyCapacity number the amount of energy the craft can store
----@field energyFraction number the energy fraction. Returns 1 if no batteries present
----@field power number the amount of power currently available
----@field powerCapacity number the amount of power the craft can at most deliver
----@field powerFraction number the power fraction. Returns 1 if no power generators are present
+---@field material ConstructResource the amount of materials stored
+---@field ammo ConstructResource the amount of ammo currently available
+---@field fuel ConstructResource the amount of fuel currently available
+---@field energy ConstructResource the amount of energy currently available
+---@field power ConstructResource the amount of power currently available
 
 ---@field health number the fraction of health your construct has left
 ---@field docker boolean Is the vehicle docked
@@ -64,3 +54,9 @@ local construct = {}
 function construct:healthFractionDifference(time)
     
 end
+
+---@class ConstructResource
+---@field current number
+---@field fraction number
+---@field capacity number
+local constructResource = {}
