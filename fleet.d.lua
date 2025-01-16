@@ -18,6 +18,6 @@ local fleet = {}
 ---@class FleetInfo
 ---@field id integer Unique ID of the fleet.
 ---@field name string Name of the fleet.
----@field flagship FriendlyInfo Information about the flagship of the fleet.
----@field members FriendlyInfo[] A table of information regarding the fleet's members.  MAY CONTAIN NILS!
+---@field flagship Construct Information about the flagship of the fleet.
+---@field members Construct[] A table of information regarding the fleet's members.
 local fleetInfo = {}
