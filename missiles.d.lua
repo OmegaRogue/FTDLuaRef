@@ -13,6 +13,13 @@
 ---@field warnings WarningInfo[]
 local missiles = {}
 
+---Returns a WarningInfo object for a unique id
+---@param id integer
+---@return WarningInfo?
+function missiles.getById(id)
+    
+end
+
 
 ---@class WarningInfo
 ---@field valid boolean Is the warning valid or junk due to incorrect indices
@@ -39,19 +46,19 @@ local luaMissile = {}
 
 ---Explodes the missile.
 ---Needs a lua reciever component ON the missile to work
-function luaMissile.detonate()
+function luaMissile:detonate()
     
 end
 
 ---Sets the aim point. No guidance module will help achieve this aim point so do your own predictive guidance.
 ---Needs a lua reciever component ON the missile to work
 ---@param point float3 global coordinates of the aim point
-function luaMissile.setAimPoint(point)
+function luaMissile:setAimPoint(point)
     
 end
 
 ---Set the target of an interceptor missile to be a specific missile for which a warning exists.
 ---This is enough to get the interceptor missile to behave normally but if you want to actually guide it yourself set [standardGuidance](lua://LuaMissile.standardGuidance)
 ---@param target WarningInfo the missile warning to target
-function luaMissile.setInterceptorTarget(target)
+function luaMissile:setInterceptorTarget(target)
 end

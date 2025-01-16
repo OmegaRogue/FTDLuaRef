@@ -8,27 +8,18 @@
 ---@module 'main'
 ---@module 'math'
 
----@class Target
----@field mainframes integer The number of mainframes on your vehicle
-local target = {}
-
----@param mainframeIndex integer see [mainframes](lua://Target.mainframes) to find out how many there are
----@return TargetInfo[] All targets of the mainframe. If target prioritisation card is in use this is ordered by priority
-function target.targets(mainframeIndex)
-end
-
----@param mainframeIndex integer see [mainframes](lua://Target.mainframes) to find out how many there are
----@param targetIndex integer If target prioritisation card is in use 1 is the highest priority target.
----@return TargetPositionInfo 
-function target.positionInfo(mainframeIndex, targetIndex) 
-end
-
----@param mainframeIndex integer see [mainframes](lua://Target.mainframes) to find out how many there are
----@param position float3 x is east/west in meters. y is up/down in meters, 0 is the sea level. z is north/south in meters.
----@return TargetPositionInfo A TargetPositionInfo object for this point in space. Velocity will be 0.
-function target.positionInfoForPosition(mainframeIndex, position)
-end
-
+---@class TargetInfo
+---@field priority integer 0 is the highest priority
+---@field score float higher is a good score- taken from target prioritisation card
+---@field aimPointPosition float3 position in game world of aim point (this is the current position of the block that's being aimed for)
+---@field team integer team of the target
+---@field aiAlive boolean is the target a salvage
+---@field position float3 target position in game world
+---@field velocity float3 velocity in game world
+---@field playerChoice boolean has the player set this as the target
+---@field id integer the unique id of this target
+---@field posInfo TargetPositionInfo position info of the target for navigation
+local targetInfo = {}
 
 ---@class TargetPositionInfo
 ---@field valid boolean If the target position info is correctly returned.
