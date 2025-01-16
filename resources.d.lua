@@ -12,6 +12,13 @@
 ---@field zones ResourceZone[] List of known resource zones
 local resources = {}
 
+---Returns a ResourceZone object for a unique id
+---@param id integer
+---@return ResourceZone?
+function resources.getById(id)
+    
+end
+
 ---@class ResourceZone
 ---@field id integer unique ID of the resource zone
 ---@field name string name of the resource zone

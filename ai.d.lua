@@ -34,7 +34,6 @@ local ai = {}
 ---@field lookAt float3? the desired global point to look at, or nil if it doesn't matter
 ---@field lookOffset quaternion? the amount of offset the rotation of the craft relative to the point to look at, or nil if it doesn't matter. Useful for broadsiding
 ---@field priority integer priority of this module, used for picking the module to supply to the AI. Lower is more important
----@field targets TargetInfo[]
 local BbBehaviourLink = {}
 
 ---@class AiMainframe
@@ -47,10 +46,17 @@ local BbBehaviourLink = {}
 ---@field steeringPoint float3 the mainframe's steering point
 ---@field attackSalvage bool true if the mainframe should attack craft with no AI
 ---@field bbBehaviourLink BbBehaviourLink access to interact with the breadboard behaviour link
----@field position float3 All targets of the mainframe. If target prioritisation card is in use this is ordered by priority
+---@field position float3 position of the mainframe in the world
+---@field targets TargetInfo[] All targets of the mainframe. If target prioritisation card is in use this is ordered by priority
 local AiMainframe = {}
 
 ---@param position float3 x is east/west in meters. y is up/down in meters, 0 is the sea level. z is north/south in meters.
 ---@return TargetPositionInfo A TargetPositionInfo object for this point in space. Velocity will be 0.
-function AiMainframe.positionInfoForPosition(mainframeIndex, position)
+function AiMainframe:positionInfoForPosition(position)
+end
+
+---Returns a TargetInfo object for a unique id
+---@param id integer
+---@return TargetInfo?
+function AiMainframe:getById(id)
 end
