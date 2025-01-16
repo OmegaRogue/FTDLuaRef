@@ -58,13 +58,6 @@
 ---@field uniqueId integer the unique id of this construct
 local construct = {}
 
----Returns the position of the mainframe in the world. Returns float3(0) if no such mainframe exists.
----@param mainframeIndex integer index of the AI mainframe
----@return float3 The position
-function construct:aiPosition(mainframeIndex)
-    
-end
-
 ---Returns health difference over a specified measurement time
 ---@param time number The time you want the difference measured over. Time will be limited to be between 1 and 30
 ---@return number Health difference as a fraction

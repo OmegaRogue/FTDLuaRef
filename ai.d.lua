@@ -7,6 +7,7 @@
 
 ---@module 'main'
 ---@module 'math'
+---@module 'targetInfo'
 
 ---@enum AiMovementModes
 local AiMovementMode = {
@@ -17,13 +18,8 @@ local AiMovementMode = {
 }
 
 ---@class AI
+---@field mainframes AiMainframe[]
 local ai = {}
-
----@param index integer index of the AI mainframe
----@return AiMainframe? the AI at the given index, or nil if it doesn't exist
-function ai.get(index)
-
-end
 
 -- This corresponds directly with the breadboard "AI Behaviour Input"
 --
@@ -33,11 +29,12 @@ end
 ---@class BbBehaviourLink
 ---@field aimpoint float3 the global position of the steering point
 ---@field distance float the total distance of the trip
----@field endRotation Quaternion? desired global end rotation of the craft, or nil if it doesn't matter
----@field direction Quaternion? desired global rotation of the craft during the movement, or nil if it doesn't matter
+---@field endRotation quaternion? desired global end rotation of the craft, or nil if it doesn't matter
+---@field direction quaternion? desired global rotation of the craft during the movement, or nil if it doesn't matter
 ---@field lookAt float3? the desired global point to look at, or nil if it doesn't matter
----@field lookOffset Quaternion? the amount of offset the rotation of the craft relative to the point to look at, or nil if it doesn't matter. Useful for broadsiding
+---@field lookOffset quaternion? the amount of offset the rotation of the craft relative to the point to look at, or nil if it doesn't matter. Useful for broadsiding
 ---@field priority integer priority of this module, used for picking the module to supply to the AI. Lower is more important
+---@field targets TargetInfo[]
 local BbBehaviourLink = {}
 
 ---@class AiMainframe
@@ -50,4 +47,10 @@ local BbBehaviourLink = {}
 ---@field steeringPoint float3 the mainframe's steering point
 ---@field attackSalvage bool true if the mainframe should attack craft with no AI
 ---@field bbBehaviourLink BbBehaviourLink access to interact with the breadboard behaviour link
+---@field position float3 All targets of the mainframe. If target prioritisation card is in use this is ordered by priority
 local AiMainframe = {}
+
+---@param position float3 x is east/west in meters. y is up/down in meters, 0 is the sea level. z is north/south in meters.
+---@return TargetPositionInfo A TargetPositionInfo object for this point in space. Velocity will be 0.
+function AiMainframe.positionInfoForPosition(mainframeIndex, position)
+end

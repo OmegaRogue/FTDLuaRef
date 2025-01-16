@@ -7,8 +7,10 @@
 
 ---@module 'main'
 ---@module 'math'
+---@module 'construct'
 
 ---@class Friendlies
+---@field constructs Construct[]
 local friendlies = {}
 
 ---Returns the number of friendly constructs
