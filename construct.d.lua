@@ -10,18 +10,6 @@
 
 
 -- Previously: "awareness", renamed to "construct"
---
--- Construct mainly resembles FriendlyInfo. My main point is that
---   `friendlies.get()` now returns a Construct, because I don't see
---   why either interface should differ.
---
--- Each (material|ammo|fuel|energy|power)(|Capacity|Fraction)
---   might as well be compressed into a new class,
---   perhaps called "ResourceInfo" or "CraftResources",
---   or each an instance of a { fraction, current, capacity } table,
---   because it currently looks quite bloated
---
--- *Fraction fields are mostly for kept around for legacy reasons
 
 ---@class Construct
 ---@field transformLocal RigidTransform the local transform of the construct. The position is the position of the first block ever places, or the center of the starting raft that it was built from.
@@ -56,7 +44,7 @@ function construct:healthFractionDifference(time)
 end
 
 ---@class ConstructResource
----@field current number
----@field fraction number
----@field capacity number
+---@field current number the amount of this resource the construct currently has available
+---@field capacity number the amount of this resource the construct may at most store, or for power: deliver
+---@field fraction number the fraction of this resource the construct currently has available. May be NaN if no such storage is present
 local constructResource = {}
