@@ -42,6 +42,9 @@ local luaTransceiver = {}
 ---@field isInterceptor boolean Does the missile have interceptor capability
 ---@field standardGuidance boolean turns standard guidance for the missile on and off.
 ---@field info WarningInfo
+---@field fuel number
+---@field clearedLaunchpad boolean
+---@field clearedVehicle boolean
 local luaMissile = {}
 
 ---Explodes the missile.
