@@ -11,12 +11,12 @@
 
 ---@class Friendlies
 ---@field constructs Construct[]
-local friendlies = {}
+local Friendlies = {}
 
 ---Returns a Construct object for a unique id
 ---@param id integer
 ---@return Construct?
-function friendlies.getById(id)
-    
+function Friendlies.get_by_id(id)
+
 end
 

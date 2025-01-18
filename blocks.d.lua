@@ -9,25 +9,25 @@
 ---@module 'math'
 
 ---@class BlockInfo
----@field valid boolean
----@field transformLocal RigidTransform the local transform of this block
+---@field is_valid boolean
+---@field transform_local RigidTransform the local transform of this block
 ---@field transform RigidTransform the transform of this block
----@field posRelativeToCom float3 the local position relative to the center of mass
----@field subConstructId integer The sub construct identifier of the subconstruct the block is part of.
----@field customName string The custom name assigned to the block
-local blockInfo = {}
+---@field pos_relative_to_com float3 the local position relative to the center of mass
+---@field sub_construct_id integer The sub construct identifier of the subconstruct the block is part of.
+---@field custom_name string The custom name assigned to the block
+local BlockInfo = {}
 
 ---@enum (key) BlockType
-local BlockTypes = {
-	MissileWinch = 0,
+local BlockType = {
+	MISSILE_WINCH = 0,
 	--TODO: expand to other block types
 }
 
 ---@class Blocks
----@field byName { [string]: Block[] }
----@field byType { [BlockType]: Block[] }
----@field availableTypes BlockType[]
-local blocks = {}
+---@field by_name { [string]: Block[] }
+---@field by_type { [BlockType]: Block[] }
+---@field available_types BlockType[]
+local Blocks = {}
 
 
 ---@class Block
@@ -36,5 +36,5 @@ local blocks = {}
 ---@field [string] any Block-Specific properties (enumerable with pairs or dumpable with tostring)
 ---@operator tostring: string
 ---@operator pairs: string
---TODO: potentially specificy what properties each block has, as giving access to everything would mean allowing changing block health values for example
-local block = {}
+--TODO: potentially specify what properties each block has, as giving access to everything would mean allowing changing block health values for example
+local Block = {}

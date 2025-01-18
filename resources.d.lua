@@ -10,13 +10,13 @@
 
 ---@class Resources
 ---@field zones ResourceZone[] List of known resource zones
-local resources = {}
+local Resources = {}
 
 ---Returns a ResourceZone object for a unique id
 ---@param id integer
 ---@return ResourceZone?
-function resources.getById(id)
-    
+function Resources.get_by_id(id)
+
 end
 
 ---@class ResourceZone
@@ -27,4 +27,4 @@ end
 ---@field quantity number amount of materials currently present in the resource zone >>> ZoneResource.Quantity
 ---@field capacity number maximum amount of materials the resource zone can store >>> ZoneResource.Max
 ---@field growth number amount of materials the resource zone replenishes per second  >>> ZoneResource.Growth
-local resourceZone = {}
+local ResourceZone = {}
