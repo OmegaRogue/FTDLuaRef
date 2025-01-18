@@ -27,7 +27,7 @@ local ai = {}
 --   or we just use an explicit set*() for each.
 
 ---@class BbBehaviourLink
----@field aimpoint float3 the global position of the steering point
+---@field aim_point float3 the global position of the steering point
 ---@field distance float the total distance of the trip
 ---@field end_rotation quaternion? desired global end rotation of the craft, or nil if it doesn't matter
 ---@field direction quaternion? desired global rotation of the craft during the movement, or nil if it doesn't matter

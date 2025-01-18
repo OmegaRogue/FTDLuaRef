@@ -51,10 +51,10 @@ function LuaMissile:detonate()
 
 end
 
----Sets the aimpoint. No guidance module will help achieve this aimpoint so do your own predictive guidance.
+---Sets the aim point. No guidance module will help achieve this aim point so do your own predictive guidance.
 ---Needs a lua receiver component ON the missile to work
 ---@param point float3 global coordinates of the aim point
-function LuaMissile:set_aimpoint(point)
+function LuaMissile:set_aim_point(point)
 
 end
 
