@@ -15,11 +15,11 @@ end
 
 ---Write a message to the HUD.
 ---HUD messages are visible during normal play and when on the map.
-function logToHud()
+function log_to_hud()
 
 end
 
 ---Clears your log.
-function clearLogs()
+function clear_logs()
 
 end
