@@ -29,16 +29,16 @@ local Inputs = {
 ---@enum stim
 local Stims = {
 	None = 0,
-	T = 1,
-	G = 2,
-	Y = 3,
-	H = 4,
-	U = 5,
-	J = 6,
-	I = 7,
-	K = 8,
-	O = 9,
-	L = 10,
+	Q = 1,
+	A = 2,
+	W = 3,
+	S = 4,
+	E = 5,
+	D = 6,
+	R = 7,
+	F = 8,
+	T = 9,
+	G = 10,
 	Up = 11,
 	Down = 12,
 	Left = 13,
@@ -90,7 +90,7 @@ function propulsion.moveFortress(direction)
 end
 
 ---Creates or uses an axis with a custom name.
----Adds a value to the axis. 
+---Adds a value to the axis.
 ---Axes values are limited to between -1 and 1.
 ---Axes names are limited to 32 characters.
 ---@param axisName string name of the axis to create/use. Limited to 32 characters.

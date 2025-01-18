@@ -12,6 +12,9 @@
 ---@field time number time with an arbitrary offset in seconds
 ---@field timeSinceSpawn number time since construct spawned in seconds
 ---@field gameTime number time since the instance started in seconds
+---@field frame number The current physics step frame number
+---@field frameDelta number The time between this and the previous frame in seconds
+---@field dayFraction number The time of day, between 0 and 1
 ---@field wind float3 The direction and magnitude of the current wind
 local misc = {}
 
