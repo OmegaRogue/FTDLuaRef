@@ -11,7 +11,7 @@
 ---@class TargetInfo
 ---@field priority integer 0 is the highest priority
 ---@field score float higher is a good score- taken from target prioritisation card
----@field aim_point_position float3 position in game world of aim_point (this is the current position of the block that's being aimed for)
+---@field aim_point_position float3 position in game world of aim point (this is the current position of the block that's being aimed for)
 ---@field team integer team of the target
 ---@field is_ai_alive boolean is the target a salvage
 ---@field position float3 target position in game world
