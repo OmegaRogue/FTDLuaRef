@@ -14,8 +14,6 @@ This is meant as a sort of RFC to work out a final API that suits the needs.
 ### Update API to use LUA styleguide
 
 ### Events API
-If needs must some of these could be implemented in environment.lua using existing APIs, specifically the target events
-
 - CRAM Fired
 - Missile Fired
 - APS Fired
