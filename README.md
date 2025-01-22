@@ -70,6 +70,4 @@ Notably:
 ### Misc Utilities
 Simple enough to provide a base implementation in LUA (if using a native implementation is too much work)
 - PID
-- One Shot
-- Delay Pulse
 - Playback (This feels like a meme? Included for completeness)
